@@ -1,0 +1,12 @@
+set softtabstop=4
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set showmatch
+set matchtime=2
+"set title
+set scrolloff=3
+set textwidth=0
+set nu
+set relativenumber
+set mouse=
