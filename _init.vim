@@ -10,3 +10,4 @@ set textwidth=0
 set nu
 set relativenumber
 set mouse=
+set fileformats=unix
