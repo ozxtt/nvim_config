@@ -20,7 +20,8 @@ local function tele_init(_, opts)
     -- pcall(telescope.load_extension, 'fzf')
 
     -- Clone the default Telescope configuration
-    local vimgrep_arguments = { table.unpack(telescopeConfig.values.vimgrep_arguments) }
+    -- local vimgrep_arguments = { table.unpack(telescopeConfig.values.vimgrep_arguments) } -- Lua 5.4
+    local vimgrep_arguments = { unpack(telescopeConfig.values.vimgrep_arguments) } -- Lua 5.1
 
     -- I want to search in hidden/dot files.
     -- table.insert(vimgrep_arguments, "--hidden")

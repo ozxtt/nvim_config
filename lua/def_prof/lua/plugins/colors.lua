@@ -1,6 +1,6 @@
 
 
-function color_init()
+local function color_init()
     local kan = require('kanagawa')
     local col = require('kanagawa.colors').setup({theme='wave'})
     local pal = col.palette
@@ -11,6 +11,7 @@ function color_init()
             ui = {
                 bg = pal.sumiInk0,
                 bg_visual = pal.waveBlue2,
+                bg_search = pal.surimiOrange,
                 }
             }}}
     })

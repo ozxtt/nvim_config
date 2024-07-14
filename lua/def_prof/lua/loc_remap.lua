@@ -10,7 +10,7 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", {desc = 'move selection up'})
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", {desc = 'move selection down'})
 
 -- paste over selection without overwriting the buffer
-vim.keymap.set("x", "<leader>p", [["_dP]])
+vim.keymap.set("x", "p", [["_dP]])
 
 -- copy into a system buffer
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]], {desc = '[Y]ank into sys clip'})
@@ -20,6 +20,8 @@ vim.keymap.set("i", "<C-o>", "<C-R>+", {desc = '[P]aste from sys clip'})
 
 -- delete to void
 vim.keymap.set({"n", "v"}, "<leader>d", [["_d]], {desc = '[D]elete to void'})
+
+vim.keymap.set({"n", "v"}, "'", "`")
 
 -- switch buffers
 wk.register({ ["<leader>b"] = { name = "+[B]uf" }, })
