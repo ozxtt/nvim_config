@@ -9,7 +9,7 @@ local function color_init()
     kan.setup({colors =
         {theme = {wave = {
             ui = {
-                bg = pal.sumiInk0,
+                bg = pal.dragonBlack0,
                 bg_visual = pal.waveBlue2,
                 bg_search = pal.surimiOrange,
                 }

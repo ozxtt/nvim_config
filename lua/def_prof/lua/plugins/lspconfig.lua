@@ -59,7 +59,7 @@ local function lspcfg_init()
 
     local wk = require("which-key")
 
-    wk.register({ ["<leader>l"] = { name = "+[L]sp" }, })
+    wk.add({ {"<leader>l",  group = "+[L]sp" } })
 
     local on_attach = function(_, bufnr)
 

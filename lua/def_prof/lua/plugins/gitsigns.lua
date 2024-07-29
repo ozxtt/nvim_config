@@ -39,8 +39,8 @@ local function sign_init()
         map('n', '<leader>gd', gs.diffthis, {desc='[d]iff with commit'})
         map('n', '<leader>gD', function() gs.diffthis('~') end, {desc='[D]iff with index'})
         map('n', '<leader>gx', gs.toggle_deleted, {desc='toggle deleted'})
-        -- local wk = require("which-key")
-        -- wk.register({ ["<leader>g"] = { name = "+[G]it" }, })
+        local wk = require("which-key")
+        wk.add({ {"<leader>g", group = "[G]it" } })
 
     end
     })

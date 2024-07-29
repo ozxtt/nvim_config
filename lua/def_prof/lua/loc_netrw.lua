@@ -1,7 +1,7 @@
 
 local wk = require("which-key")
 
-wk.register({ ["<leader>n"] = { name = "+[N]etrw" }, })
+wk.add({ {"<leader>n",  group = "[N]etrw" } })
 vim.keymap.set("n", "<leader>nl", vim.cmd.Lexplore, {desc = '[L]explore cwd'})
 -- vim.keymap.set("n", "<leader>nf", vim.cmd("Lexplore %:p:h"), {desc = '[L]explore cfd'})
 vim.keymap.set("n", "<leader>nf", "<cmd>Lexplore %:p:h<CR>", {desc = 'Lexplore c[F]d'})

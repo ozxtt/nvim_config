@@ -3,7 +3,7 @@ local function tele_init(_, opts)
     local builtin = require('telescope.builtin')
     local wk = require("which-key")
 
-    wk.register({ ["<leader>f"] = { name = "+[F]ind" }, })
+    wk.add({ {"<leader>f", group = "[F]ind" }, })
     vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc='[F]ind [F]ile' })
     vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc='[F]ind [B]uffers' })
     vim.keymap.set('n', '<leader>fo', builtin.oldfiles, { desc='[F]ind [O]ld file' })
