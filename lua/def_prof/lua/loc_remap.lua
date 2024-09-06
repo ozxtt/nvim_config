@@ -23,10 +23,18 @@ vim.keymap.set({"n", "v"}, "<F11>", [["+p]], {desc = '[P]aste from sys clip (F11
 vim.keymap.set("i", "<C-o>", "<C-R>+", {desc = '[P]aste from sys clip'})
 
 -- delete to void
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]], {desc = '[D]elete to void'})
+vim.keymap.set({"n", "v"}, "<leader>D", [["_d]], {desc = '[D]elete to void'})
 
 vim.keymap.set({"n", "v"}, "'", "`")
 
+-- diff
+wk.add({ {"<leader>d",  group = "[D]iff" } })
+vim.keymap.set("n", "<leader>dg", function() return ":.,.+" .. vim.v.count .. "diffget<CR>" end, {desc = 'Diff [G]et', expr = true})
+vim.keymap.set("n", "<leader>dp", function() return ":.,.+" .. vim.v.count .. "diffput<CR>" end, {desc = 'Diff [P]ut', expr = true})
+vim.keymap.set("v", "<leader>dg", ":'<,'>diffget<CR>", {desc = 'Diff [G]et'})
+vim.keymap.set("v", "<leader>dp", ":'<,'>diffput<CR>", {desc = 'Diff [P]ut'})
+vim.keymap.set("n", "<leader>dt", vim.cmd.diffthis, {desc = 'Diff [T]his'})
+vim.keymap.set("n", "<leader>do", vim.cmd.diffoff, {desc = 'Diff [O]ff'})
 -- switch buffers
 wk.add({ {"<leader>b",  group = "[B]uf" } })
 vim.keymap.set("n", "<S-Right>", vim.cmd.bnext, {desc = 'Next buf'})
@@ -46,6 +54,7 @@ vim.keymap.set("n", "<leader><Space>", switch_buf,  {expr = true, desc = '#Switc
 --
 vim.keymap.set("n", "gV", "`[v`]", {desc = '[V]isually select pasted text'})
 vim.keymap.set("n", "<leader>q", vim.cmd.quit, {desc = '[Q]uit'})
+vim.keymap.set("n", "<leader>a", vim.cmd.qall, {desc = 'quit [A]ll'})
 
 wk.add({ {"<leader>t",  group = "[T]oggle" } })
 -- vim.keymap.set("n", "<leader>th", ':set hlsearch!<CR>', {desc = 'toggle [H]lsearch (F1)'})
